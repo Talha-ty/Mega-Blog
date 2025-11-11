@@ -170,7 +170,7 @@ export default function MainContent({ $id, title, featuredImage, content }) {
         {posts.map((post, index) => (
           <Grid key={post.$id} size={{ xs: 12, md: 6 }}>
             <Link
-        to={`/post/${$id}`}
+        to={`/post/${post.$id}`}
         style={{ textDecoration: 'none', color: 'inherit' }}
       >
             <StyledCard

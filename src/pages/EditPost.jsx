@@ -25,6 +25,7 @@ function EditPost(props) {
     }, [slug, navigate])
   return post ? (
     <>
+    <div className='mt-24'>
        <AppTheme {...props}>
              <CssBaseline enableColorScheme />
              <Header />
@@ -32,6 +33,7 @@ function EditPost(props) {
                <PostFrom post={post} />
              </Container>
              </AppTheme >
+             </div>
              )
    </>
   ) : null

@@ -19,6 +19,8 @@ export default function Post(props) {
   const isAuthor = post && userData ? post.userId === userData.$id : false;
 
   useEffect(() => {
+    
+
     if (slug) {
       appwriteService.getPost(slug).then((post) => {
         if (post) setPost(post);
@@ -54,11 +56,11 @@ export default function Post(props) {
           {isAuthor && (
             <div className="absolute right-6 top-6">
               <Link to={`/edit-post/${post.$id}`}>
-                <Button bgColor="bg-green-500" className="mr-3">
+                <Button bgColor="bg-blue-600" className="mr-3">
                   Edit
                 </Button>
               </Link>
-              <Button bgColor="bg-red-500" onClick={deletePost}>
+              <Button bgColor="bg-red-600" onClick={deletePost}>
                 Delete
               </Button>
             </div>
